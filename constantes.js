@@ -1,21 +1,25 @@
-var xRobo = 200;
+var xPiso = 70;
+var yPiso = 170;
+var larguraPiso = 100;
+var alturaPiso = 20;
+
 var larguraRobo = 100;
-var xMensagem = xRobo + larguraRobo/2;
+var alturaRobo = 100;
 
 var cons = {
-    X_ROBO : xRobo,
-    Y_ROBO : 90,
+    X_ROBO : xPiso,
+    Y_ROBO : yPiso - alturaRobo - 10,
     LARGURA_ROBO : larguraRobo,
-    ALTURA_ROBO : 100,
+    ALTURA_ROBO : alturaRobo,
     COR_ROBO : "hsl(180, 100%, 30%)",
 
-    X_MENSAGEM : xMensagem,
-    Y_MENSAGEM : 70,
+    X_MENSAGEM : xPiso + larguraRobo/2,
+    Y_MENSAGEM : yPiso - alturaRobo - 20,
 
-    X_PISO : 200,
-    Y_PISO : 200,
-    LARGURA_PISO : 100,
-    ALTURA_PISO : 20,
+    X_PISO : xPiso,
+    Y_PISO : yPiso,
+    LARGURA_PISO : larguraPiso,
+    ALTURA_PISO : alturaPiso,
     COR_PISO_LIMPO : "hsl(287, 100%, 50%)",
     COR_PISO_SUJO : "hsl(0, 41%, 24%)",
 
