@@ -16,7 +16,8 @@ var cons = {
     Y_PISO : 200,
     LARGURA_PISO : 100,
     ALTURA_PISO : 20,
-    COR_PISO : "hsl(287, 100%, 50%)",
+    COR_PISO_LIMPO : "hsl(287, 100%, 50%)",
+    COR_PISO_SUJO : "hsl(0, 41%, 24%)",
 
     ESPACAMENTO_X : 200,
     ESPACAMENTO_Y : 200,

@@ -3,7 +3,7 @@ class Cenario {
         this.graficos = graficosCenario;
         this.nLinhas = nLinhas;
         this.nColunas = nColunas;
-        this.robo = new Robo(this.graficos, 0, 0)
+        this.robo = new Robo(this.graficos, 1, 1)
         this.matrizPisos = [];
         this.inicializarMatrizPisos();
     }
