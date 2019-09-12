@@ -16,11 +16,16 @@ class Robo {
             .attr("height", cons["ALTURA_ROBO"])
             .attr("fill", cons["COR_ROBO"]);
 
+        this.qntMovimentosEmVao = 0;
         this.lerProbabilidadesHTML();
     }
 
     setMensagem(mensagem) {
         this.mensagem.text(mensagem);
+    }
+
+    setQntMovimentosEmVao(qnt) {
+        this.qntMovimentosEmVao = qnt;
     }
 
     lerProbabilidadesHTML() {
@@ -36,6 +41,20 @@ class Robo {
             direita : qntDireita / total,
             esquerda : qntEsquerda / total
         };
+    }
+
+    checarOciosidade() {
+        if(this.qntMovimentosEmVao == cons["MAXIMO_MOVIMENTOS_EM_VAO"]) {
+            //Resetar historico
+            d3.select("#CIMA").text("1");
+            d3.select("#BAIXO").text("1");
+            d3.select("#DIREITA").text("1");
+            d3.select("#ESQUERDA").text("1");
+            d3.select("#TOTAL").text("4");
+
+            this.qntMovimentosEmVao = 0;
+            this.lerProbabilidadesHTML();
+        }
     }
 
     incrementarLabel(id) {

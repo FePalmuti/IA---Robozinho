@@ -6,7 +6,7 @@ c = new Cenario(graficosCenario, 3, 3);
 
 atualizar();
 //Chama a funcao atualizar a cada x milisegundos
-setInterval(atualizar, 2000);
+setInterval(atualizar, 1000);
 
 //------------------------------------------------------------------------------
 
@@ -14,10 +14,14 @@ function atualizar() {
     if(c.matrizPisos[c.robo.linha][c.robo.coluna].estahSujo) {
         c.robo.setMensagem("Limpando...");
         c.robo.contabilizarLimpeza();
+        c.robo.setQntMovimentosEmVao(0);
         c.matrizPisos[c.robo.linha][c.robo.coluna].ficarLimpo();
     }
     else {
         c.robo.setMensagem("");
+        c.robo.setQntMovimentosEmVao(c.robo.qntMovimentosEmVao + 1);
+        c.robo.checarOciosidade();
+
         var movimentoValidoEncontrado = false;
         while(!movimentoValidoEncontrado) {
             var direcao = c.robo.definirProximoMovimento();
