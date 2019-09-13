@@ -1,5 +1,5 @@
-var xPiso = 70;
-var yPiso = 170;
+var xPiso = 100;
+var yPiso = 140;
 var larguraPiso = 100;
 var alturaPiso = 20;
 
